@@ -7,7 +7,7 @@ export default function Paginatie({ searchValue, pageCount, setImageList }) {
   const [page, setPage] = React.useState(1);
   const handleChange = async (event, value) => {
     const response = await axios.get(
-      `https://pixabay.com/api/?key=23662182-a70494797e8140caffbf82463&q=${searchValue}&image_type=photo&pretty=true&per_page=10&page=${value}`
+      `https://pixabay.com/api/?key=_&q=${searchValue}&image_type=photo&pretty=true&per_page=10&page=${value}`
     );
     setPage(value);
     setImageList(response.data.hits);
