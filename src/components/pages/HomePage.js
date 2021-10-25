@@ -11,7 +11,7 @@ const HomePage = () => {
   const [search, setSearch] = useState("");
   const searchHandlder = async (searchValue = "car") => {
     const response = await axios.get(
-      `https://pixabay.com/api/?key=23662182-a70494797e8140caffbf82463&q=${searchValue}&image_type=photo&pretty=true&per_page=10}`
+      `https://pixabay.com/api/?key=_=${searchValue}&image_type=photo&pretty=true&per_page=10}`
     );
     setSearch(searchValue);
     setImageList(response.data.hits);
